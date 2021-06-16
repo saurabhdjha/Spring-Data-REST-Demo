@@ -1,7 +1,7 @@
 
 Spring Data and REST API crud APP
 
-Ceating a Spring Boot Application using Spring Data with REST API support.
+Creating a Spring Boot Application using Spring Data with REST API support.
 --------------------------------------------------------------------------
 Aim: to learn about Spring Data and REST API.
 There are 2 entities in this project, Customer and Admin.
@@ -71,4 +71,4 @@ Following functionalities have been provided for Admin:
 >> Exception cases are handled
 >> Default Logging ( Logback ) is used for logging. Check: logs/Error.log
 
-   
+>> Currently, server is configured at port 3456. If required, can change the same by modifing "server.port" in application.properties
