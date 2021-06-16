@@ -1,0 +1,92 @@
+2021-06-16 00:27:45.952  INFO 6564 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-06-16 00:27:46.057  INFO 6564 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 85 ms. Found 2 JPA repository interfaces.
+2021-06-16 00:27:46.859  INFO 6564 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3456 (http)
+2021-06-16 00:27:46.881  INFO 6564 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-16 00:27:46.882  INFO 6564 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-16 00:27:47.047  INFO 6564 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-16 00:27:47.048  INFO 6564 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2060 ms
+2021-06-16 00:27:47.215  INFO 6564 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-06-16 00:27:47.590  INFO 6564 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-06-16 00:27:47.781  INFO 6564 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-06-16 00:27:47.861  INFO 6564 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-06-16 00:27:48.118  INFO 6564 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-06-16 00:27:48.314  INFO 6564 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-06-16 00:27:49.109  INFO 6564 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-06-16 00:27:49.126  INFO 6564 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-06-16 00:27:49.832  WARN 6564 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-06-16 00:27:50.325  INFO 6564 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3456 (http) with context path ''
+2021-06-16 00:28:00.426  INFO 6564 --- [http-nio-3456-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-16 00:28:00.428  INFO 6564 --- [http-nio-3456-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-06-16 00:28:00.431  INFO 6564 --- [http-nio-3456-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2021-06-16 00:28:01.259 ERROR 6564 --- [http-nio-3456-exec-2] com.demo.api.AdminAPI                    : Invalid admin loginId. Try again
+2021-06-16 00:29:16.841 ERROR 6564 --- [http-nio-3456-exec-5] com.demo.api.AdminAPI                    : null
+2021-06-16 00:30:46.771  INFO 8640 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-06-16 00:30:46.849  INFO 8640 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 2 JPA repository interfaces.
+2021-06-16 00:30:47.558  INFO 8640 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3456 (http)
+2021-06-16 00:30:47.572  INFO 8640 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-16 00:30:47.573  INFO 8640 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-16 00:30:47.705  INFO 8640 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-16 00:30:47.707  INFO 8640 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1646 ms
+2021-06-16 00:30:47.828  INFO 8640 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-06-16 00:30:48.029  INFO 8640 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-06-16 00:30:48.212  INFO 8640 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-06-16 00:30:48.271  INFO 8640 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-06-16 00:30:48.423  INFO 8640 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-06-16 00:30:48.545  INFO 8640 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-06-16 00:30:49.198  INFO 8640 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-06-16 00:30:49.212  INFO 8640 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-06-16 00:30:49.634  WARN 8640 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-06-16 00:30:50.019  INFO 8640 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3456 (http) with context path ''
+2021-06-16 00:31:00.988  INFO 8640 --- [http-nio-3456-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-16 00:31:00.989  INFO 8640 --- [http-nio-3456-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-06-16 00:31:00.991  INFO 8640 --- [http-nio-3456-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-06-16 00:31:01.582 ERROR 8640 --- [http-nio-3456-exec-3] com.demo.api.AdminAPI                    : Invalid admin password. Try again
+2021-06-16 00:31:30.623 ERROR 8640 --- [http-nio-3456-exec-2] com.demo.api.AdminAPI                    : Invalid admin password. Try again
+2021-06-16 00:31:42.503 ERROR 8640 --- [http-nio-3456-exec-4] com.demo.api.AdminAPI                    : Invalid admin password. Try again
+2021-06-16 00:32:11.707 ERROR 8640 --- [http-nio-3456-exec-5] com.demo.api.AdminAPI                    : Invalid admin password. Try again
+2021-06-16 13:06:45.247  INFO 1108 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-06-16 13:06:45.338  INFO 1108 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 2 JPA repository interfaces.
+2021-06-16 13:06:46.296  INFO 1108 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3456 (http)
+2021-06-16 13:06:46.311  INFO 1108 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-16 13:06:46.313  INFO 1108 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-16 13:06:46.462  INFO 1108 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-16 13:06:46.463  INFO 1108 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1935 ms
+2021-06-16 13:06:46.604  INFO 1108 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-06-16 13:06:46.857  INFO 1108 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-06-16 13:06:47.026  INFO 1108 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-06-16 13:06:47.093  INFO 1108 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-06-16 13:06:47.243  INFO 1108 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-06-16 13:06:47.368  INFO 1108 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-06-16 13:06:48.870  INFO 1108 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-06-16 13:06:48.915  INFO 1108 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-06-16 13:06:49.923  WARN 1108 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-06-16 13:06:50.737  INFO 1108 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3456 (http) with context path ''
+2021-06-16 13:15:39.767  INFO 1108 --- [http-nio-3456-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-16 13:15:39.769  INFO 1108 --- [http-nio-3456-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-06-16 13:15:39.775  INFO 1108 --- [http-nio-3456-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2021-06-16 13:19:13.265 ERROR 1108 --- [http-nio-3456-exec-8] com.demo.api.CustomerAPI                 : Invalid admin password. Try again
+2021-06-16 13:19:20.464 ERROR 1108 --- [http-nio-3456-exec-10] com.demo.api.CustomerAPI                 : Invalid emailId. Try Again with registered emailId.
+2021-06-16 13:20:04.903  WARN 1108 --- [http-nio-3456-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2021-06-16 13:20:48.297 ERROR 1108 --- [http-nio-3456-exec-5] com.demo.api.CustomerAPI                 : Invalid emailId. Try Again with registered emailId.
+2021-06-16 13:20:56.975 ERROR 1108 --- [http-nio-3456-exec-7] com.demo.api.CustomerAPI                 : Invalid admin password. Try again
+2021-06-16 13:21:33.498 ERROR 1108 --- [http-nio-3456-exec-10] com.demo.api.AdminAPI                    : Invalid admin password. Try again
+2021-06-16 13:36:26.748  INFO 19292 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-06-16 13:36:26.823  INFO 19292 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 2 JPA repository interfaces.
+2021-06-16 13:36:27.533  INFO 19292 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3456 (http)
+2021-06-16 13:36:27.547  INFO 19292 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-16 13:36:27.548  INFO 19292 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-16 13:36:27.686  INFO 19292 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-16 13:36:27.687  INFO 19292 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1608 ms
+2021-06-16 13:36:27.821  INFO 19292 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-06-16 13:36:28.028  INFO 19292 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-06-16 13:36:28.161  INFO 19292 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-06-16 13:36:28.225  INFO 19292 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-06-16 13:36:28.380  INFO 19292 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-06-16 13:36:28.513  INFO 19292 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-06-16 13:36:29.060  INFO 19292 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-06-16 13:36:29.070  INFO 19292 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-06-16 13:36:29.596  WARN 19292 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-06-16 13:36:30.000  INFO 19292 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3456 (http) with context path ''
+2021-06-16 13:37:07.889  INFO 19292 --- [http-nio-3456-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-16 13:37:07.890  INFO 19292 --- [http-nio-3456-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-06-16 13:37:07.893  INFO 19292 --- [http-nio-3456-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
