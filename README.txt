@@ -7,7 +7,29 @@ Aim: to learn about Spring Data and REST API.
 There are 2 entities in this project, Customer and Admin.
 
 
-Following functionalities have been provided for Customer:
+
+
+Project Configurations:
+-----------------------
+>project generated using "spring initializr"
+>Dependencies: Spring Web, Spring Data JPA and MySQL Driver
+
+>in application.properties add following:-
+
+#MySQL settings
+spring.datasource.url=jdbc:mysql://localhost:3306/springdatacrud
+spring.datasource.username=root
+spring.datasource.password=root
+#JPA settings
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+
+>> Currently, server is configured at port 3456. If required, can change the same by modifing "server.port" in application.properties
+
+
+
+
+**Following functionalities have been provided for Customer:
 ---------------------------------------------------------
 
 1) add new customer ie. Sign up
@@ -43,7 +65,7 @@ Following functionalities have been provided for Customer:
 
 
 
-Following functionalities have been provided for Admin:
+**Following functionalities have been provided for Admin:
 ---------------------------------------------------------
 
 1) View Cutomer Details
@@ -71,4 +93,3 @@ Following functionalities have been provided for Admin:
 >> Exception cases are handled
 >> Default Logging ( Logback ) is used for logging. Check: logs/Error.log
 
->> Currently, server is configured at port 3456. If required, can change the same by modifing "server.port" in application.properties
