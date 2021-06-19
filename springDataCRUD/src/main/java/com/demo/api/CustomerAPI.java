@@ -1,6 +1,8 @@
 package com.demo.api;
 
 
+import java.util.List;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +17,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.demo.dto.CardDTO;
 import com.demo.dto.CustomerDTO;
+import com.demo.dto.LoanDTO;
 import com.demo.exception.CustomerException;
 import com.demo.service.CustomerService;
 
@@ -33,8 +37,8 @@ public class CustomerAPI {
 	private static final Log LOGGER=LogFactory.getLog(CustomerAPI.class);
 	
 	// Customer: To create new Account
-	@PostMapping(value="/addCustomer")
-	public ResponseEntity<String> addCustomer(@RequestBody CustomerDTO customerDTO)
+	@PostMapping(value="/signUp")
+	public ResponseEntity<String> signUp(@RequestBody CustomerDTO customerDTO)
 	{
 		try
 		{
@@ -51,9 +55,9 @@ public class CustomerAPI {
 		
 	}
 	
-	// Customer: To update his/her details.
-	@PostMapping(value="/updateCustomer/{emailId}/{password}")
-	public ResponseEntity<String> updateCustomer(@RequestBody CustomerDTO customerDTO, @PathVariable String emailId, @PathVariable String password)
+	// Customer: To update his/her details. can update only phoneNumber,password, city, state and pincode
+	@PostMapping(value="/updateDetails/{emailId}/{password}")
+	public ResponseEntity<String> updateDetails(@RequestBody CustomerDTO customerDTO, @PathVariable String emailId, @PathVariable String password)
 	{
 		try {
 			String message=customerService.updateCustomer(customerDTO, emailId, password);
@@ -68,7 +72,7 @@ public class CustomerAPI {
 	}
 	
 	// Customer: can see his/her details on entering email and password
-	@GetMapping(value="/getMyDetail/{emailId}/{password}")
+	@GetMapping(value="/getMyDetails/{emailId}/{password}")
 	public ResponseEntity<CustomerDTO> getMyDetails(@PathVariable String emailId, @PathVariable String password)
 	{
 		try {
@@ -99,5 +103,74 @@ public class CustomerAPI {
 			return new ResponseEntity<String>(message,HttpStatus.BAD_REQUEST);
 		}
 		
+	}
+	
+	//Customer: Apply for loan
+	@PostMapping(value="/applyForLoan/{emailId}/{password}/{amount}/{loanType}")
+	public ResponseEntity<String> getLoan(@PathVariable String emailId,@PathVariable String password,@PathVariable Double amount,@PathVariable String loanType)
+	{
+		try
+		{
+			Integer loanId=customerService.applyForLoan(emailId, password, amount, loanType);
+			String message="You have successfully applied for "+loanType+", Amount: Rs."+amount+"  Loan Id: "+loanId;
+			return new ResponseEntity<String>(message,HttpStatus.ACCEPTED);
+		}
+		catch(Exception e)
+		{
+			String message=environment.getProperty(e.getMessage());
+        	LOGGER.error(message);
+			return new ResponseEntity<String>(message,HttpStatus.BAD_REQUEST);
+		}
+		
+	}
+	
+	@GetMapping(value="/myLoans/{emailId}/{password}")
+	public ResponseEntity<List<LoanDTO>> myLoans(@PathVariable String emailId, @PathVariable String password)
+	{
+		try {
+			List<LoanDTO> loanDTOs=customerService.myLoans(emailId, password);
+			return new ResponseEntity<List<LoanDTO>>(loanDTOs,HttpStatus.OK);
+		}
+		catch(Exception e)
+		{
+			String message=environment.getProperty(e.getMessage());
+        	LOGGER.error(message);
+		}
+		
+		return null;
+	}
+	
+	@PostMapping(value="/addCard/{emailId}/{password}")
+	public ResponseEntity<String> myLoans(@RequestBody CardDTO cardDTO,@PathVariable String emailId, @PathVariable String password)
+	{
+		try {
+			
+			Integer id=customerService.addCard(emailId, password, cardDTO);
+			String message="card added successfully for id: "+id;
+			return new ResponseEntity<String>(message,HttpStatus.BAD_REQUEST);
+		}
+		catch(Exception e)
+		{
+			String message=environment.getProperty(e.getMessage());
+        	LOGGER.error(message);
+        	return new ResponseEntity<String>(message,HttpStatus.BAD_REQUEST);
+		}
+	}
+	
+
+	@GetMapping(value="/getMyCards/{emailId}/{password}")
+	public ResponseEntity<List<CardDTO>> myCards(@PathVariable String emailId, @PathVariable String password)
+	{
+		try {
+			
+			List<CardDTO> cardDTOs=customerService.myCards(emailId, password);
+			return new ResponseEntity<>(cardDTOs,HttpStatus.BAD_REQUEST);
+		}
+		catch(Exception e)
+		{
+			String message=environment.getProperty(e.getMessage());
+        	LOGGER.error(message);
+        	return new ResponseEntity<>(null,HttpStatus.BAD_REQUEST);
+		}
 	}
 }

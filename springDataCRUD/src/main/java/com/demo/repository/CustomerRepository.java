@@ -16,6 +16,6 @@ public interface CustomerRepository extends CrudRepository<Customer,Integer>{
 	Customer findByEmailId(String emailId);
 	
 	//Query creation using @Query Annotation
-	@Query("SELECT c FROM Customer c WHERE c.city = :city")
+	@Query("SELECT c FROM Customer c WHERE c.address.city = :city")
 	List<Customer> getAllCustomersByCity(@Param("city") String city);
 }

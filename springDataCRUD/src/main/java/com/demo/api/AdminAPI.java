@@ -10,12 +10,14 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.demo.dto.AdminDTO;
 import com.demo.dto.CustomerDTO;
+import com.demo.dto.LoanDTO;
 import com.demo.service.AdminService;
 
 @RestController
@@ -57,5 +59,55 @@ public class AdminAPI {
 	{
 		List<CustomerDTO> customerDTOs=adminService.getAllCustomersByCity(city);
 		 return new ResponseEntity<>(customerDTOs,HttpStatus.OK); 
+	}
+	
+	@GetMapping(value="/loansByCustomerId/{customerId}")
+	public ResponseEntity<List<LoanDTO>> myLoans(@PathVariable Integer customerId)
+	{
+		try {
+			List<LoanDTO> loanDTOs=adminService.getLoanByCustomerId(customerId);
+			return new ResponseEntity<List<LoanDTO>>(loanDTOs,HttpStatus.OK);
+		}
+		catch(Exception e)
+		{
+			String message=environment.getProperty(e.getMessage());
+        	LOGGER.error(message);
+		}
+		
+		return null;
+	}
+	
+	@PutMapping(value="/approveLoan/{customerId}/{loanId}")
+	public ResponseEntity<String> approveLoan(@PathVariable Integer customerId, @PathVariable Integer loanId)
+	{
+		try {
+			
+			Integer loanIdR=adminService.approveLoan(customerId, loanId);
+			String message="Loan id: "+loanIdR+" against customerId: "+customerId+" approved successfully!!";
+			return new ResponseEntity<String>(message,HttpStatus.OK);
+		}
+		catch(Exception e)
+		{
+			String message=environment.getProperty(e.getMessage());
+			LOGGER.error(message);
+			return new ResponseEntity<String>(message,HttpStatus.BAD_GATEWAY);
+		}
+	}
+	
+	@PutMapping(value="/rejectLoan/{customerId}/{loanId}")
+	public ResponseEntity<String> rejectLoan(@PathVariable Integer customerId, @PathVariable Integer loanId)
+	{
+		try {
+			
+			Integer loanIdR=adminService.rejectLoan(customerId, loanId);
+			String message="Loan id: "+loanIdR+" against customerId: "+customerId+" Rejected!!";
+			return new ResponseEntity<String>(message,HttpStatus.OK);
+		}
+		catch(Exception e)
+		{
+			String message=environment.getProperty(e.getMessage());
+			LOGGER.error(message);
+			return new ResponseEntity<String>(message,HttpStatus.BAD_GATEWAY);
+		}
 	}
 }
