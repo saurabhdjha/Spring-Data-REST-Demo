@@ -3,6 +3,7 @@ Spring Data and REST API crud APP
 
 Creating a Spring Boot Application using Spring Data with REST API support.
 --------------------------------------------------------------------------
+
 Aim: to learn about Spring Data and REST API.
 
 There are 2 entities in this project, Customer and Admin.
@@ -25,8 +26,14 @@ Relationship b/w:
 >Customer & Card
  ----------------
  (1:M), created a List<Card> in Customer Entity Class. Also, customer_id as foreign Key in Card Table 
+
 __________________________________________________________________________________________________________________________________
 
+Update**: Updated Exception Handling
+Earlier, i was handling exception using try-catch. Later, learned about @RestControllerAdvice and ResponseStatusException Class.
+Thus, Implemeted the same into this project
+
+___________________________________________________________________________________________________________________________________
 
 Project Configurations:
 -----------------------
